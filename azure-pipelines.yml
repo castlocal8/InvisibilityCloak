@@ -1,20 +1,19 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
+# Clone the repos we want to use
 resources:
   repositories:
+
   - repository: InvisibilityCloak
     type: github
     endpoint: castlocal8
     name: castlocal8/InvisibilityCloak
 
+  - repository: SeatBelt
+    type: github
+    endpoint: castlocal8
+    name: castlocal8/Seatbelt
+
 trigger:
 - main
-
-pool:
-  vmImage: ubuntu-latest
 
 steps:
 - script: echo Hello, world!
